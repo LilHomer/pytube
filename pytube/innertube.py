@@ -19,6 +19,7 @@ _client_id = '861556708454-d6dlm3lh05idd8npek18k6be8ba3oc68.apps.googleuserconte
 _client_secret = 'SboVhoG9s0rNafixCSGGKXAT'
 
 # Extracted API keys -- unclear what these are linked to.
+# API keys are not required, see: https://github.com/TeamNewPipe/NewPipeExtractor/pull/1168
 _api_keys = [
     'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
     'AIzaSyCtkvNIR1HCEwzsqK6JuE6KqpyjusIRI30',
@@ -29,195 +30,312 @@ _api_keys = [
 ]
 
 _default_clients = {
-    'WEB': {
-        'context': {
-            'client': {
-                'clientName': 'WEB',
-                'clientVersion': '2.20200720.00.02'
-            }
+        'WEB': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'WEB',
+                        'osName': 'Windows',
+                        'osVersion': '10.0',
+                        'clientVersion': '2.20240709.01.00',
+                        'platform': 'DESKTOP'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'Mozilla/5.0',
+                'X-Youtube-Client-Name': '1',
+                'X-Youtube-Client-Version': '2.20240709.01.00'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': True
         },
-        'header': {
-            'User-Agent': 'Mozilla/5.0'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'ANDROID': {
-        'context': {
-            'client': {
-                'clientName': 'ANDROID',
-                #'clientVersion': '17.31.35',
-                'clientVersion': '19.08.35',
-                'androidSdkVersion': 30
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.android.youtube/',
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'IOS': {
-        'context': {
-            'client': {
-                'clientName': 'IOS',
-                #'clientVersion': '17.33.2',
-                'clientVersion': '19.08.35',
-                'deviceModel': 'iPhone14,3'
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.ios.youtube/'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
 
-    'WEB_EMBED': {
-        'context': {
-            'client': {
-                'clientName': 'WEB_EMBEDDED_PLAYER',
-                'clientVersion': '2.20210721.00.00',
-                'clientScreen': 'EMBED'
-            }
+        'WEB_EMBED': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'WEB_EMBEDDED_PLAYER',
+                        'osName': 'Windows',
+                        'osVersion': '10.0',
+                        'clientVersion': '2.20240530.02.00',
+                        'clientScreen': 'EMBED'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'Mozilla/5.0',
+                'X-Youtube-Client-Name': '56',
+                'X-Youtube-Client-Version': '2.20240530.02.00'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': True
         },
-        'header': {
-            'User-Agent': 'Mozilla/5.0'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'ANDROID_EMBED': {
-        'context': {
-            'client': {
-                'clientName': 'ANDROID_EMBEDDED_PLAYER',
-                #'clientVersion': '17.31.35',
-                'clientVersion': '19.08.35',
-                'clientScreen': 'EMBED',
-                'androidSdkVersion': 30,
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.android.youtube/'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'IOS_EMBED': {
-        'context': {
-            'client': {
-                'clientName': 'IOS_MESSAGES_EXTENSION',
-                #'clientVersion': '17.33.2',
-                'clientVersion': '19.08.35',
-                'deviceModel': 'iPhone14,3'
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.ios.youtube/'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
 
-    'WEB_MUSIC': {
-        'context': {
-            'client': {
-                'clientName': 'WEB_REMIX',
-                'clientVersion': '1.20220727.01.00',
-            }
+        'WEB_MUSIC': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'WEB_REMIX',
+                        'clientVersion': '1.20240403.01.00'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'Mozilla/5.0',
+                'X-Youtube-Client-Name': '67',
+                'X-Youtube-Client-Version': '1.20240403.01.00'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': True
         },
-        'header': {
-            'User-Agent': 'Mozilla/5.0'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'ANDROID_MUSIC': {
-        'context': {
-            'client': {
-                'clientName': 'ANDROID_MUSIC',
-                #'clientVersion': '5.16.51',
-                'clientVersion': '6.40.52',
-                'androidSdkVersion': 30
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.android.apps.youtube.music/'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'IOS_MUSIC': {
-        'context': {
-            'client': {
-                'clientName': 'IOS_MUSIC',
-                #'clientVersion': '5.21',
-                'clientVersion': '6.41',
-                'deviceModel': 'iPhone14,3'
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.ios.youtubemusic/'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
 
-    'WEB_CREATOR': {
-        'context': {
-            'client': {
-                'clientName': 'WEB_CREATOR',
-                'clientVersion': '1.20220726.00.00',
-            }
+        'WEB_CREATOR': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'WEB_CREATOR',
+                        'clientVersion': '1.20220726.00.00'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'Mozilla/5.0',
+                'X-Youtube-Client-Name': '62',
+                'X-Youtube-Client-Version': '1.20220726.00.00'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': True
         },
-        'header': {
-            'User-Agent': 'Mozilla/5.0'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'ANDROID_CREATOR': {
-        'context': {
-            'client': {
-                'clientName': 'ANDROID_CREATOR',
-                'clientVersion': '22.30.100',
-                'androidSdkVersion': 30,
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.android.apps.youtube.creator/',
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
-    'IOS_CREATOR': {
-        'context': {
-            'client': {
-                'clientName': 'IOS_CREATOR',
-                'clientVersion': '22.33.101',
-                'deviceModel': 'iPhone14,3',
-            }
-        },
-        'header': {
-            'User-Agent': 'com.google.ios.ytcreator/'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
 
-    'MWEB': {
-        'context': {
-            'client': {
-                'clientName': 'MWEB',
-                'clientVersion': '2.20220801.00.00',
-            }
+        'MWEB': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'MWEB',
+                        'clientVersion': '2.20240304.08.00'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+                'X-Youtube-Client-Name': '2',
+                'X-Youtube-Client-Version': '2.20240304.08.00'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': True
         },
-        'header': {
-            'User-Agent': 'Mozilla/5.0'
-        },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
 
-    'TV_EMBED': {
-        'context': {
-            'client': {
-                'clientName': 'TVHTML5_SIMPLY_EMBEDDED_PLAYER',
-                'clientVersion': '2.0',
-            }
+        'ANDROID': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'ANDROID',
+                        'clientVersion': '19.21.37',
+                        'platform': 'MOBILE',
+                        'osName': 'Android',
+                        'osVersion': '14',
+                        'androidSdkVersion': '34'
+                    }
+                },
+                'params': 'CgIIAdgDAQ%3D%3D'
+            },
+            'header': {
+                'User-Agent': 'com.google.android.youtube/',
+                'X-Youtube-Client-Name': '3',
+                'X-Youtube-Client-Version': '19.21.37'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
         },
-        'header': {
-            'User-Agent': 'Mozilla/5.0'
+
+        'ANDROID_EMBED': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'ANDROID_EMBEDDED_PLAYER',
+                        'clientVersion': '19.13.36',
+                        'clientScreen': 'EMBED',
+                        'androidSdkVersion': '30'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.android.youtube/',
+                'X-Youtube-Client-Name': '55',
+                'X-Youtube-Client-Version': '19.13.36'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
         },
-        'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
-    },
+
+        'ANDROID_MUSIC': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'ANDROID_MUSIC',
+                        'clientVersion': '6.40.52',
+                        'androidSdkVersion': '30'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.android.apps.youtube.music/',
+                'X-Youtube-Client-Name': '21',
+                'X-Youtube-Client-Version': '6.40.52'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
+        },
+
+        'ANDROID_CREATOR': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'ANDROID_CREATOR',
+                        'clientVersion': '22.30.100',
+                        'androidSdkVersion': '30'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.android.apps.youtube.creator/',
+                'X-Youtube-Client-Name': '14',
+                'X-Youtube-Client-Version': '22.30.100'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
+        },
+
+        'ANDROID_TESTSUITE': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'ANDROID_TESTSUITE',
+                        'clientVersion': '1.9',
+                        'platform': 'MOBILE',
+                        'osName': 'Android',
+                        'osVersion': '14',
+                        'androidSdkVersion': '34'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.android.youtube/',
+                'X-Youtube-Client-Name': '30',
+                'X-Youtube-Client-Version': '1.9'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
+        },
+
+        'IOS': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'IOS',
+                        'clientVersion': '19.14.3',
+                        'deviceMake': 'Apple',
+                        'platform': 'MOBILE',
+                        'osName': 'iOS',
+                        'osVersion': '17.4.1.21E237',
+                        'deviceModel': 'iPhone15,5'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.ios.youtube/',
+                'X-Youtube-Client-Name': '5',
+                'X-Youtube-Client-Version': '19.14.3'
+            },
+            'api_key': 'AIzaSyB-63vPrdThhKuerbB2N_l7Kwwcxj6yUAc',
+            'require_js_player': False
+        },
+
+        'IOS_EMBED': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'IOS_MESSAGES_EXTENSION',
+                        'clientVersion': '19.16.3',
+                        'deviceMake': 'Apple',
+                        'platform': 'MOBILE',
+                        'osName': 'iOS',
+                        'osVersion': '17.4.1.21E237',
+                        'deviceModel': 'iPhone15,5'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.ios.youtube/',
+                'X-Youtube-Client-Name': '66',
+                'X-Youtube-Client-Version': '19.16.3'
+            },
+            'api_key': 'AIzaSyB-63vPrdThhKuerbB2N_l7Kwwcxj6yUAc',
+            'require_js_player': False
+        },
+
+        'IOS_MUSIC': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'IOS_MUSIC',
+                        'clientVersion': '6.42',
+                        'deviceMake': 'Apple',
+                        'platform': 'MOBILE',
+                        'osName': 'iOS',
+                        'osVersion': '17.4.1.21E237',
+                        'deviceModel': 'iPhone14,3'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.ios.youtubemusic/',
+                'X-Youtube-Client-Name': '26',
+                'X-Youtube-Client-Version': '6.42'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
+        },
+
+        'IOS_CREATOR': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'IOS_CREATOR',
+                        'clientVersion': '22.33.101',
+                        'deviceModel': 'iPhone14,3'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'com.google.ios.ytcreator/',
+                'X-Youtube-Client-Name': '15',
+                'X-Youtube-Client-Version': '22.33.101'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': False
+        },
+
+        'TV_EMBED': {
+            'innertube_context': {
+                'context': {
+                    'client': {
+                        'clientName': 'TVHTML5_SIMPLY_EMBEDDED_PLAYER',
+                        'clientVersion': '2.0',
+                        'clientScreen': 'EMBED',
+                        'platform': 'TV'
+                    }
+                }
+            },
+            'header': {
+                'User-Agent': 'Mozilla/5.0',
+                'X-Youtube-Client-Name': '85',
+                'X-Youtube-Client-Version': '2.0'
+            },
+            'api_key': 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8',
+            'require_js_player': True
+        }
 }
 _token_timeout = 1800
 _cache_dir = pathlib.Path(__file__).parent.resolve() / '__cache__'
@@ -226,20 +344,22 @@ _token_file = os.path.join(_cache_dir, 'tokens.json')
 
 class InnerTube:
     """Object for interacting with the innertube API."""
-    def __init__(self, client='ANDROID_MUSIC', use_oauth=False, allow_cache=True):
+    def __init__(self, client='ANDROID_TESTSUITE', use_oauth=False, allow_cache=True):
         """Initialize an InnerTube object.
 
         :param str client:
             Client to use for the object.
-            Default to web because it returns the most playback types.
+            The default is ANDROID_TESTSUITE because there is no need to decrypt the
+            signature cipher and throttling parameter.
         :param bool use_oauth:
             Whether or not to authenticate to YouTube.
         :param bool allow_cache:
             Allows caching of oauth tokens on the machine.
         """
-        self.context = _default_clients[client]['context']
+        self.innertube_context = _default_clients[client]['innertube_context']
         self.header = _default_clients[client]['header']
         self.api_key = _default_clients[client]['api_key']
+        self.require_js_player = _default_clients[client]['require_js_player']
         self.access_token = None
         self.refresh_token = None
         self.use_oauth = use_oauth
@@ -249,15 +369,13 @@ class InnerTube:
         self.expires = None
 
         # Try to load from file if specified
-        if self.use_oauth and self.allow_cache:
-            # Try to load from file if possible
-            if os.path.exists(_token_file):
-                with open(_token_file) as f:
-                    data = json.load(f)
-                    self.access_token = data['access_token']
-                    self.refresh_token = data['refresh_token']
-                    self.expires = data['expires']
-                    self.refresh_bearer_token()
+        if self.use_oauth and self.allow_cache and os.path.exists(_token_file):
+            with open(_token_file) as f:
+                data = json.load(f)
+                self.access_token = data['access_token']
+                self.refresh_token = data['refresh_token']
+                self.expires = data['expires']
+                self.refresh_bearer_token()
 
     def cache_tokens(self):
         """Cache tokens to file if allowed."""
@@ -357,26 +475,22 @@ class InnerTube:
         return 'https://www.youtube.com/youtubei/v1'
 
     @property
-    def base_data(self):
+    def base_data(self) -> dict:
         """Return the base json data to transmit to the innertube API."""
-        return {
-            'context': self.context
-        }
+        return self.innertube_context
 
     @property
     def base_params(self):
         """Return the base query parameters to transmit to the innertube API."""
         return {
-            'key': self.api_key,
-            'contentCheckOk': True,
-            'racyCheckOk': True
+            'prettyPrint': "false"
         }
 
     def _call_api(self, endpoint, query, data):
         """Make a request to a given endpoint with the provided query parameters and data."""
-        # Remove the API key if oauth is being used.
-        if self.use_oauth:
-            del query['key']
+        # When YouTube used an API key, it was necessary to remove it when using oauth
+        # if self.use_oauth:
+        #     del query['key']
 
         endpoint_url = f'{endpoint}?{parse.urlencode(query)}'
         headers = {
@@ -386,10 +500,10 @@ class InnerTube:
         if self.use_oauth:
             if self.access_token:
                 self.refresh_bearer_token()
-                headers['Authorization'] = f'Bearer {self.access_token}'
             else:
                 self.fetch_bearer_token()
-                headers['Authorization'] = f'Bearer {self.access_token}'
+
+            headers['Authorization'] = f'Bearer {self.access_token}'
 
         headers.update(self.header)
 
@@ -447,10 +561,9 @@ class InnerTube:
             Raw player info results.
         """
         endpoint = f'{self.base_url}/player'
-        query = {
-            'videoId': video_id,
-        }
-        query.update(self.base_params)
+        query = self.base_params
+
+        self.base_data.update({'videoId': video_id, 'contentCheckOk': "true"})
         return self._call_api(endpoint, query, self.base_data)
 
     def search(self, search_query, continuation=None):
@@ -463,11 +576,9 @@ class InnerTube:
             Raw search query results.
         """
         endpoint = f'{self.base_url}/search'
-        query = {
-            'query': search_query
-        }
-        query.update(self.base_params)
+        query = self.base_params
         data = {}
+        self.base_data.update({'query': search_query})
         if continuation:
             data['continuation'] = continuation
         data.update(self.base_data)
