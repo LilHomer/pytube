@@ -23,7 +23,7 @@ def _execute_request(
     data=None,
     timeout=socket._GLOBAL_DEFAULT_TIMEOUT
 ):
-    base_headers = {"User-Agent": "Mozilla/5.0", "accept-language": "en-US,en"}
+    base_headers = {"User-Agent": "Mozilla/2.0", "accept-language": "en-US,en"}
     if headers:
         base_headers.update(headers)
     if data and not isinstance(data, bytes): # encode data for request
